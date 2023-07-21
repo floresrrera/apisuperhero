@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es_MX">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API SUPERHERO</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+<body>
+  <section style="background-color: #eee;">
+    <div class="container py-5">
+        <div class="form-group row align-items-center">
+          <label for="p_buscar" class="col-sm-2">Search superhero</label>
+          <div class="col-sm-8">
+            <input type="text" class="form-control" placeholder="Search superhero" name="name_superhero" id="p_buscar">
+          </div>
+          <!-- <div class="col-sm-2"> -->
+            <button type="button" class="btn btn-primary" id="btn_buscar">Search</button>
+          <!-- </div> -->
+        </div>
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="card mb-4">
+            <div class="card-body text-center">
+              <img src="https://media.licdn.com/dms/image/C4E03AQGHyxWlMIQPhw/profile-displayphoto-shrink_800_800/0/1633633379845?e=1695254400&v=beta&t=BaMfk80nUnx0xBGmD7vGdhwKddRr5KGgZgEO5rTlFGw" alt="avatar" class="rounded-circle img-fluid" style="width: 150px;" id="superhero_image">
+              <h5 class="my-3" id="superhero_name"></h5>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-lg-8">
+          <div class="card mb-4">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-sm-3">
+                  <p class="mb-0">Full name</p>
+                </div>
+                <div class="col-sm-9">
+                  <p class="text-muted mb-0" id="superhero_fullname"></p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col">
+                  <p class="text-center font-weight-bold">Powerstats</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-3">
+                  <p class="mb-0">Combat</p>
+                </div>
+                <div class="col-sm-9">
+                  <p class="text-muted mb-0" id="superhero_combat"></p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <p class="mb-0">Durability</p>
+                </div>
+                <div class="col-sm-9">
+                  <p class="text-muted mb-0" id="superhero_durability"></p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <p class="mb-0">Intelligence</p>
+                </div>
+                <div class="col-sm-9">
+                  <p class="text-muted mb-0" id="superhero_intelligence"></p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <p class="mb-0">Power</p>
+                </div>
+                <div class="col-sm-9">
+                  <p class="text-muted mb-0" id="superhero_power"></p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <p class="mb-0">Speed</p>
+                </div>
+                <div class="col-sm-9">
+                  <p class="text-muted mb-0" id="superhero_speed"></p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <p class="mb-0">Strength</p>
+                </div>
+                <div class="col-sm-9">
+                  <p class="text-muted mb-0" id="superhero_strength"></p>
+                </div>
+              </div>
+              <hr>
+
+              <div class="row">
+                <div class="col">
+                  <p class="text-center font-weight-bold">Appearance</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-3">
+                  <p class="mb-0">Eye color</p>
+                </div>
+                <div class="col-sm-9">
+                  <p class="text-muted mb-0" id="superhero_eyeColor"></p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <p class="mb-0">Gender</p>
+                </div>
+                <div class="col-sm-9">
+                  <p class="text-muted mb-0" id="superhero_gender"></p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <p class="mb-0">Hair color</p>
+                </div>
+                <div class="col-sm-9">
+                  <p class="text-muted mb-0" id="superhero_hairColor"></p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <p class="mb-0">Height</p>
+                </div>
+                <div class="col-sm-9">
+                  <p class="text-muted mb-0" id="superhero_height"></p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <p class="mb-0">Race</p>
+                </div>
+                <div class="col-sm-9">
+                  <p class="text-muted mb-0" id="superhero_race"></p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <p class="mb-0">Weight</p>
+                </div>
+                <div class="col-sm-9">
+                  <p class="text-muted mb-0" id="superhero_weight"></p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col">
+                  <p class="text-center font-weight-bold">Biography</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-3">
+                  <p class="mb-0">Aliases</p>
+                </div>
+                <div class="col-sm-9">
+                  <p class="text-muted mb-0" id="superhero_aliases"></p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <p class="mb-0">Alignment</p>
+                </div>
+                <div class="col-sm-9">
+                  <p class="text-muted mb-0" id="superhero_alignment"></p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <p class="mb-0">Alter egos</p>
+                </div>
+                <div class="col-sm-9">
+                  <p class="text-muted mb-0" id="superhero_alterEgos"></p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <p class="mb-0">First appearance</p>
+                </div>
+                <div class="col-sm-9">
+                  <p class="text-muted mb-0" id="superhero_firstAppearance"></p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <p class="mb-0">Full name</p>
+                </div>
+                <div class="col-sm-9">
+                  <p class="text-muted mb-0" id="superhero_fullName"></p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <p class="mb-0">Place of birth</p>
+                </div>
+                <div class="col-sm-9">
+                  <p class="text-muted mb-0" id="superhero_placeOfBirth"></p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <p class="mb-0">Publisher</p>
+                </div>
+                <div class="col-sm-9">
+                  <p class="text-muted mb-0" id="superhero_publisher"></p>
+                </div>
+              </div>
+              <hr>
+
+              <div class="row">
+                <div class="col">
+                  <p class="text-center font-weight-bold">Connections</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-3">
+                  <p class="mb-0">Group affiliation</p>
+                </div>
+                <div class="col-sm-9">
+                  <p class="text-muted mb-0" id="superhero_groupAffiliation"></p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <p class="mb-0">Relatives</p>
+                </div>
+                <div class="col-sm-9">
+                  <p class="text-muted mb-0" id="superhero_relatives"></p>
+                </div>
+              </div>
+              <hr>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- scripts -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>
+<script>
+  $("#btn_buscar").click(function () {
+    var name_superhero = $("#p_buscar").val().replace(" ", "");
+    $("#p_nombre").text("Hola mundo");
+    const data = null;
+    const xhr = new XMLHttpRequest();
+    xhr.withCredentials = true;
+    xhr.open('GET', 'https://superhero-search.p.rapidapi.com/api/?hero=' + name_superhero);
+    xhr.setRequestHeader('X-RapidAPI-Key', 'ea4561c3cdmsh317c2765ac13203p129571jsn551260e917be');
+    xhr.setRequestHeader('X-RapidAPI-Host', 'superhero-search.p.rapidapi.com');
+    xhr.send(data);
+    xhr.onload = () => {
+      if (xhr.readyState == 4 && xhr.status == 200) {
+        const data = xhr.response;
+        if (xhr.responseText != "Hero Not Found") {
+          var result = JSON.parse(xhr.responseText);
+          document.getElementById("superhero_image").src = result["images"]["md"];
+          $("#superhero_name").text(result["name"]);
+          $("#superhero_fullname").text(result["biography"]["fullName"]);
+          //powerstats
+          $("#superhero_combat").text(result["powerstats"]["combat"]);
+          $("#superhero_durability").text(result["powerstats"]["durability"]);
+          $("#superhero_durability").text(result["powerstats"]["intelligence"]);
+          $("#superhero_intelligence").text(result["powerstats"]["power"]);
+          $("#superhero_speed").text(result["powerstats"]["speed"]);
+          $("#superhero_strength").text(result["powerstats"]["strength"]);
+          //Appearance
+          $("#superhero_eyeColor").text(result["appearance"]["eyeColor"]);
+          $("#superhero_gender").text(result["appearance"]["gender"]);
+          $("#superhero_hairColor").text(result["appearance"]["hairColor"]);
+          $("#superhero_height").text(result["appearance"]["height"][1]);
+          $("#superhero_race").text(result["appearance"]["race"]);
+          $("#superhero_weight").text(result["appearance"]["weight"][1]);
+          //biography
+          $("#superhero_aliases").text(result["biography"]["aliases"]); //Arreglo
+          $("#superhero_alignment").text(result["biography"]["alignment"]);
+          $("#superhero_alterEgos").text(result["biography"]["alterEgos"]);
+          $("#superhero_firstAppearance").text(result["biography"]["firstAppearance"]);
+          $("#superhero_fullName").text(result["biography"]["fullName"]);
+          $("#superhero_placeOfBirth").text(result["biography"]["placeOfBirth"]);
+          $("#superhero_publisher").text(result["biography"]["publisher"]);
+          //connections
+          $("#superhero_groupAffiliation").text(result["connections"]["groupAffiliation"]);
+          $("#superhero_relatives").text(result["connections"]["relatives"]);
+        }else{
+          Swal.fire('Hero Not Found', '', 'info')
+        }
+        
+      }else {
+          console.log(data);
+          console.log(`Error: ${xhr.status}`);
+        }
+      }
+    });
+</script>
